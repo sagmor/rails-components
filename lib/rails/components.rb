@@ -1,7 +1,4 @@
-require "rails/components/version"
+require 'rails/components/version'
+require 'rails/components/engine'
+require 'rails/component'
 
-module Rails
-  module Components
-    # Your code goes here...
-  end
-end
