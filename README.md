@@ -1,28 +1,35 @@
-# Rails::Components
+# Rails components
 
-TODO: Write a gem description
+This is an aproach to modularize Rails applications into smaller apps.
 
-## Installation
+A component sits between a full rails app and a rails plugin/engine.
+They are designed to split your app into logical segments without
+impacting the development speed, specially at the early stages.
 
-Add this line to your application's Gemfile:
-
-    gem 'rails-components'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rails-components
+Every feature of a rails app should work while inside of a component
+including rails app reloading, migrations, initializers and assets.
 
 ## Usage
 
-TODO: Write usage instructions here
+Add it to your Gemfile
+
+```ruby
+gem 'rails-components'
+```
+
+And create your first component by calling
+
+```bash
+rails generate component your_component
+```
+
+Components are created inside the components directory on the
+root of the rails app and have a structure very similar to a
+common rails app.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/rails-components/fork )
+1. Fork it ( https://github.com/sagmor/rails-components/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
